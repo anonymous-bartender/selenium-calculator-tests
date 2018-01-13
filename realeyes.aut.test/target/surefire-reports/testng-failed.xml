@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
+<suite verbose="0" name="Failed suite [tests.TestSet1]">
+  <test name="Command line test(failed)">
+    <classes>
+      <class name="tests.TestSet1">
+        <methods>
+          <include name="devidebyzero"/>
+          <include name="_teardown"/>
+          <include name="_setup"/>
+          <include name="multiply"/>
+        </methods>
+      </class> <!-- tests.TestSet1 -->
+    </classes>
+  </test> <!-- Command line test(failed) -->
+</suite> <!-- Failed suite [tests.TestSet1] -->
