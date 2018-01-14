@@ -8,6 +8,7 @@ Download Maven [here](https://maven.apache.org/download.cgi).
 
 ### BrowserStack Integration
 Tests can be executed in Remotely on BrowserStack. A full fledget test is present inside `TestSet2` class. To Enable the test please find following steps.
+
 1. Set the value of BrowserStack `USERNAME` and `AUTOMATE_KEY`. 
 2. set `enabled = true` in `@Test` and `@BeforeTest` annotation.
 
