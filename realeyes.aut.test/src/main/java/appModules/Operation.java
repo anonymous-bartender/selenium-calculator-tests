@@ -36,7 +36,7 @@ public class Operation {
 		return calculator.getOutput();	
 	}
 
-	public static String DEVISION(Calculator calculator,String input1, String input2) {		
+	public static String DIVISION(Calculator calculator,String input1, String input2) {		
 		calculator.sendKeys(input1);
 		calculator.setOperator(DEVIDE);
 		calculator.sendKeys(input2);
