@@ -30,8 +30,24 @@ public class Calculator extends BaseClass{
 	}
 
 	public void setOperator(String operator) {
+
+		cmbOperations.click();		
 		Select op = new Select(cmbOperations);
-		op.selectByValue(operator);
+		List<WebElement> options = op.getOptions();
+		for(WebElement e:options) {
+			if(e.getText().equals(operator)) e.click();
+		}
+		
+	
+		
+		/*
+		 * The above code can be achieved using only a single line.
+		 * op.selectByValue(operator);
+		 * It will fail due to presnet bug in the dropdown.
+		 */
+
+		//op.selectByValue(operator);
+		//op.selectByVisibleText(operator);
 	}
 
 	public void sendKeys(String number) {

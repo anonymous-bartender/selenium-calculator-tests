@@ -16,15 +16,15 @@ import utils.Browserstack;
 
 public class TestSet2 {
 
-	String USERNAME = "";
-	String AUTOMATE_KEY="";
-
+	String USERNAME = "USERNAME";
+	String AUTOMATE_KEY="PASS-KEY";
 	String BASE_URL = "https://webautomationhw.realeyesit.com/";
+
 	WebDriver driver;
 	Login login;
 	Calculator calculator;
 
-	@BeforeMethod(enabled=true)
+	@BeforeMethod
 	public void _setup() {
 
 		Browserstack bs = new  Browserstack(USERNAME, AUTOMATE_KEY);
@@ -40,7 +40,7 @@ public class TestSet2 {
 
 	}
 
-	@Test(testName="Verify addition operation over Remote",enabled  = true)
+	@Test(testName="Verify addition operation over Remote")
 	public void verifyBSint() {
 		login = new Login(driver);
 		login.setCredentials("testuser", "testpassword");
@@ -49,7 +49,7 @@ public class TestSet2 {
 		assertEquals(Operation.ADDITION(calculator, "45", "10"),"55");
 	}
 
-	@AfterMethod(enabled=true)
+	@AfterMethod
 	public void _teardown() {
 		driver.quit();
 	}

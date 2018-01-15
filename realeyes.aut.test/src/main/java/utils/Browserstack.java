@@ -7,8 +7,8 @@ import org.openqa.selenium.remote.DesiredCapabilities;
 
 public class Browserstack {
 
-	private String USERNAME = "arghajitb1";
-	private String AUTOMATE_KEY = "VN9HDQ9AGqCs3914x4VX";
+	private String USERNAME;
+	private String AUTOMATE_KEY;
 	private String BROWSER_NAME;
 	private String BROWSER_VERSION;
 	private String OS_NAME;

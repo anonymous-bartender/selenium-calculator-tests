@@ -24,45 +24,38 @@ public class TestSet1 {
 	@BeforeMethod
 	public void _setup() {
 
-		try {
 			driver = BROWSER.Chrome();
 			driver.navigate().to(BASE_URL);
-		} catch(Exception e) {exception(e);}
 	}
 
 	@Test (testName = "Verify the multiplication operation")
 	public void multiply() {
-		try {		
+	
 			login = new Login(driver);
 			login.setCredentials("testuser", "testpassword");
 			assertEquals("Logged into system",login.performLogin(),true);
 			calculator = new Calculator(driver);
 			assertEquals(Operation.MULTIPLY(calculator, "45", "10"),"450");
-		} catch(Exception e) {exception(e);}
+
 	}
 
 	@Test (testName = "Verify that number divided by zero show message")
 	public void dividebyzero() {
-		try {
+
 		login = new Login(driver);
 		login.setCredentials("testuser", "testpassword");
 		assertEquals("Logged into system",login.performLogin(),true);
 		calculator = new Calculator(driver);
 		assertEquals(Operation.DIVISION(calculator, "45", "0"),"Cannot divide by 0");
-	} catch(Exception e) {exception(e);}
+
 	}
 
 	@AfterMethod
 	public void _teardown() {
-		try {
+
 			driver.quit();
-		} catch(Exception e) {exception(e);}
+
 	}
 
-	private void exception(Exception e) {
-		System.out.println("EXCEPTION OCCURRED");
-		e.printStackTrace();
-		assertEquals(false,true);
-	}
 
 }
