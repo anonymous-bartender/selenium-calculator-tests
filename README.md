@@ -11,6 +11,7 @@ Tests can be executed in Remotely on BrowserStack. A full fledget test is presen
 
 1. Set the value of BrowserStack `USERNAME` and `AUTOMATE_KEY` inside `src/test/java/tests.TestSet2.java`.
 2. Enable the test inside TestNG test runner XML, present in `src/test/resources/testng.xml`.
+3. Execute the tests using `mvn test` or `mvn clean package`.
 
 _Currently desktop browsers are supported._
 
